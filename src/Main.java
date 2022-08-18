@@ -41,6 +41,36 @@ public class Main {
         double pounds = 3.6;
         double poundsInKgs = pounds * 0.45359237;
         System.out.println(poundsInKgs);
-        
+
+        char myChar = 'D';
+        char myUnicodeChar = '\u0044';
+        System.out.println(myChar);
+        System.out.println(myUnicodeChar);
+
+        //char can hold unicode chars as well hence the size if 16bits. holds the extra 65k approx letters
+
+        String myString = "This is a string";
+        System.out.println("myString is equal to " + myString);
+
+        //appending to a string using + is not very effective, shown just for example -> alternative is string buffer
+        myString = myString + ", and this is more.";
+        System.out.println("myString is equal to " + myString);
+
+        //String can also hold unicode chars. its a collection of chars which can store INT_MAX number of chars. very huge !!
+        myString = myString + " \u00A9 2019";
+        System.out.println("myString is equal to " + myString);
+
+        // appending any other datatype to string automatically gets type-casted to string
+        String numberString = "250.55";
+        numberString = numberString + "49.95";
+        System.out.println(numberString);
+        String lastString = "10";
+        int myInt = 50;
+        lastString = lastString + myInt;
+        System.out.println("LastString is equal to " + lastString);
+        double doubleNumber = 120.47d;
+        lastString = lastString + doubleNumber;
+        System.out.println("LastString is equal to " + lastString);
+
     }
 }
